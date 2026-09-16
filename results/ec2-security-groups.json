@@ -1,0 +1,227 @@
+{
+  "SecurityGroups": [
+    {
+      "GroupId": "sg-017bb3c27c83204bb",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "VpcId": "vpc-04c13befd2a6427e4",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:046819497690:security-group/sg-017bb3c27c83204bb",
+      "OwnerId": "046819497690",
+      "GroupName": "default",
+      "Description": "default VPC security group",
+      "IpPermissions": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [
+            {
+              "UserId": "046819497690",
+              "GroupId": "sg-017bb3c27c83204bb"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-095356c4338f7187b",
+      "IpPermissionsEgress": [],
+      "VpcId": "vpc-04c13befd2a6427e4",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:046819497690:security-group/sg-095356c4338f7187b",
+      "OwnerId": "046819497690",
+      "GroupName": "task-rds-sg",
+      "Description": "Allows inbound PostgreSQL traffic only from the backend on port 5432 - blocks direct access from internet, frontend, and ALB",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 5432,
+          "ToPort": 5432,
+          "UserIdGroupPairs": [
+            {
+              "UserId": "046819497690",
+              "GroupId": "sg-01d7be7183c1e5d34"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-08be31ca58e68a694",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "VpcId": "vpc-0089b50f0dcd8390c",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:046819497690:security-group/sg-08be31ca58e68a694",
+      "OwnerId": "046819497690",
+      "GroupName": "default",
+      "Description": "default VPC security group",
+      "IpPermissions": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [
+            {
+              "UserId": "046819497690",
+              "GroupId": "sg-08be31ca58e68a694"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-0e7065d349263909b",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "VpcId": "vpc-04c13befd2a6427e4",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:046819497690:security-group/sg-0e7065d349263909b",
+      "OwnerId": "046819497690",
+      "GroupName": "task-alb-sg",
+      "Description": "allow ssh access to developer",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 80,
+          "ToPort": 80,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-0d234d8d71196b8e7",
+      "IpPermissionsEgress": [],
+      "VpcId": "vpc-04c13befd2a6427e4",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:046819497690:security-group/sg-0d234d8d71196b8e7",
+      "OwnerId": "046819497690",
+      "GroupName": "task-frontend-sg",
+      "Description": "Allows inbound traffic only from the ALB on port 80 - blocks direct internet access to frontend containers",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 80,
+          "ToPort": 80,
+          "UserIdGroupPairs": [
+            {
+              "UserId": "046819497690",
+              "GroupId": "sg-0e7065d349263909b"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-01d7be7183c1e5d34",
+      "IpPermissionsEgress": [],
+      "VpcId": "vpc-04c13befd2a6427e4",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:046819497690:security-group/sg-01d7be7183c1e5d34",
+      "OwnerId": "046819497690",
+      "GroupName": "task-backend-sg",
+      "Description": "Allows inbound traffic only from the ALB on port 5000 - blocks direct internet and frontend access to backend API",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 5000,
+          "ToPort": 5000,
+          "UserIdGroupPairs": [
+            {
+              "UserId": "046819497690",
+              "GroupId": "sg-0e7065d349263909b"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-0edd0b8de36653c6a",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "VpcId": "vpc-0089b50f0dcd8390c",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:046819497690:security-group/sg-0edd0b8de36653c6a",
+      "OwnerId": "046819497690",
+      "GroupName": "launch-wizard-2",
+      "Description": "launch-wizard-2 created 2026-09-15T11:14:19.430Z",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 22,
+          "ToPort": 22,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    }
+  ],
+  "$metadata": {
+    "httpStatusCode": 200,
+    "requestId": "6fe1e9fa-b42d-46d9-a742-0f5def027f79",
+    "attempts": 1,
+    "totalRetryDelay": 0
+  }
+}

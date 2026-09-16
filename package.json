@@ -1,0 +1,34 @@
+{
+  "name": "aws-integration-test",
+  "version": "1.0.0",
+  "description": "Demo/test app for AWS cross-account monitoring integration (Correlation Platform)",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudformation": "^3.658.0",
+    "@aws-sdk/client-cloudwatch": "^3.658.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.658.0",
+    "@aws-sdk/client-config-service": "^3.658.0",
+    "@aws-sdk/client-cost-explorer": "^3.658.0",
+    "@aws-sdk/client-ec2": "^3.658.0",
+    "@aws-sdk/client-ecs": "^3.658.0",
+    "@aws-sdk/client-eks": "^3.658.0",
+    "@aws-sdk/client-elastic-load-balancing-v2": "^3.658.0",
+    "@aws-sdk/client-firehose": "^3.658.0",
+    "@aws-sdk/client-guardduty": "^3.658.0",
+    "@aws-sdk/client-health": "^3.658.0",
+    "@aws-sdk/client-iam": "^3.658.0",
+    "@aws-sdk/client-lambda": "^3.658.0",
+    "@aws-sdk/client-rds": "^3.658.0",
+    "@aws-sdk/client-resource-groups-tagging-api": "^3.658.0",
+    "@aws-sdk/client-s3": "^3.658.0",
+    "@aws-sdk/client-securityhub": "^3.658.0",
+    "@aws-sdk/client-sts": "^3.658.0",
+    "@aws-sdk/credential-providers": "^3.658.0",
+    "dotenv": "^16.4.5"
+  }
+}

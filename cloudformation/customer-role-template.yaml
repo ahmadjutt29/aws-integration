@@ -1,0 +1,56 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Correlation Platform - Cross-Account Read-Only Access Role.
+  Deploy this in YOUR AWS account to grant the vendor delegated,
+  read-only monitoring access. No access keys are created or stored.
+
+Parameters:
+  VendorAccountId:
+    Type: String
+    Description: AWS Account ID of the vendor (Correlation Platform)
+    AllowedPattern: '^\d{12}$'
+    ConstraintDescription: Must be a 12-digit AWS account ID
+
+  ExternalId:
+    Type: String
+    Description: Unique ExternalId issued by the vendor for this customer (prevents confused-deputy)
+    MinLength: 8
+    NoEcho: true
+
+  RoleName:
+    Type: String
+    Default: CorrelationPlatformReadOnlyRole
+    Description: Name of the IAM role created for the vendor to assume
+
+Resources:
+  CorrelationPlatformRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Ref RoleName
+      MaxSessionDuration: 3600
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: !Sub 'arn:aws:iam::${VendorAccountId}:root'
+            Action: 'sts:AssumeRole'
+            Condition:
+              StringEquals:
+                'sts:ExternalId': !Ref ExternalId
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/ReadOnlyAccess'
+        - 'arn:aws:iam::aws:policy/AWSHealthFullAccess'
+      Tags:
+        - Key: Purpose
+          Value: CorrelationPlatformMonitoring
+        - Key: ManagedBy
+          Value: CorrelationPlatformCFN
+
+Outputs:
+  RoleArn:
+    Description: Paste this Role ARN back into the Correlation Platform onboarding screen
+    Value: !GetAtt CorrelationPlatformRole.Arn
+  ExternalIdUsed:
+    Description: Confirm this matches the ExternalId shown in the platform
+    Value: !Ref ExternalId

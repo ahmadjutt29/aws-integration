@@ -1,0 +1,18 @@
+{
+  "MetricDataResults": [
+    {
+      "Id": "m1",
+      "Label": "CPUUtilization",
+      "Timestamps": [],
+      "Values": [],
+      "StatusCode": "Complete"
+    }
+  ],
+  "Messages": [],
+  "$metadata": {
+    "httpStatusCode": 200,
+    "requestId": "6380549f-68bc-4222-bbad-877a7e443973",
+    "attempts": 1,
+    "totalRetryDelay": 0
+  }
+}

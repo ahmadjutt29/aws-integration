@@ -1,0 +1,154 @@
+{
+  "PaginationToken": "",
+  "ResourceTagMappingList": [
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:security-group-rule/sgr-0b6586d0635cc11a7",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-frontend-sg"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:volume/vol-0c144b809a32a1b21",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "vol2"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:payments::046819497690:payment-instrument:a2552752-ea23-4e59-a447-0c7d515e8559",
+      "Tags": []
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:subnet/subnet-09d2d155c4fa97780",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-subnet-private2-us-east-1b"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:instance/i-0a0617ed9ce2bf8a2",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "docker"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:route-table/rtb-0d8a365fcfe4fe535",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-rtb-private1-us-east-1a"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:natgateway/nat-10d8f482009971cf6",
+      "Tags": [
+        {
+          "Key": "NAT",
+          "Value": "docker-nat-gateway"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:subnet/subnet-0bfcc351bec169749",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-subnet-public1-us-east-1a"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:cloudformation:us-east-1:046819497690:stack/AI-Correlation/6b3a33e0-b1a6-11f1-a8db-0affcb279da3",
+      "Tags": []
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:internet-gateway/igw-092585b3c127068ab",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-igw"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:subnet/subnet-0fcfaa406b4491deb",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-subnet-public2-us-east-1b"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:route-table/rtb-05dda1ad757263732",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-rtb-private2-us-east-1b"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:vpc/vpc-04c13befd2a6427e4",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-vpc"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:subnet/subnet-04a90e9065e943f2e",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-subnet-private1-us-east-1a"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:route-table/rtb-0592885220078437c",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-rtb-public"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:security-group-rule/sgr-0ab39567019d0def8",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-alb-sg"
+        }
+      ]
+    },
+    {
+      "ResourceARN": "arn:aws:ec2:us-east-1:046819497690:vpc-endpoint/vpce-0a010c8e35377d658",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "task-manager-vpc-vpce-s3"
+        }
+      ]
+    }
+  ],
+  "$metadata": {
+    "httpStatusCode": 200,
+    "requestId": "e82bda57-4793-4b36-a41a-5a98d7659cbb",
+    "attempts": 1,
+    "totalRetryDelay": 0
+  }
+}
